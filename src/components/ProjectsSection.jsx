@@ -1,25 +1,6 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 
 const projects = [
-  // {
-  //   id: 1,
-  //   title: "Sales Analysis Project",
-  //   description: "A data analysis & visualization of regional sales in the US state in 2017 and 2018 data to identify key drivers of revenue and profit across products, channels, customers, and geographic regions.",
-  //   image: "/projects/saleanalytic.png",
-  //   tags: ["Python", "Power BI", "Excel"],
-  //   demoUrl: "#",
-  //   githubUrl: "https://github.com/Hung1510/SaleAnalysis_project.git",
-  // },
-  // {
-  //   id: 2,
-  //   title: "Movie Correlation Analysis",
-  //   description:
-  //     "An analysis to identify factors correlating with movie gross revenue, focusing on all related variables, including data cleaning, handling missing values and create data visualization",
-  //   image: "/projects/moviecorrelation.png",
-  //   tags: ["Python", "Power BI", "Excel"],
-  //   demoUrl: "#",
-  //   githubUrl: "https://github.com/Hung1510/DataAnalysis_projects.git",
-  // },
   {
     id: 1,
     title: "EIU/CIT Smart Learning Advisor",
@@ -27,8 +8,8 @@ const projects = [
       "An AI integrated website application used to monitor EIU student GPA, Visualize the curriculum to illustrate compulsory courses, prerequisites, and key subjects, along with course information and reviews,in accordance with the training program.",
     image: "/projects/smartadvisor.png",
     tags: ["Express.js", "Node.js", "EJS ","Bootstrap"],
-    demoUrl: "https://smartadvisor.eiu.com.vn/",
-    githubUrl: "#",
+    demoUrl: "https://smartlearning.onrender.com/login",
+    githubUrl: "https://github.com/Ly-Dat/SmartLearning",
   },
   {
     id: 2,
