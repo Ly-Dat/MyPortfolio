@@ -1,7 +1,6 @@
 // import { Briefcase, Code, User } from "lucide-react";
 import { Code, User } from "lucide-react";
 
-
 export const AboutSection = () => {
   return (
     <section id="about" className="py-24 px-4 relative">
@@ -39,8 +38,8 @@ export const AboutSection = () => {
               </a>
 
               <a
-                href="/public/cv/CV_LyDat.pdf"
-                download
+                href="/cv/CV_LyDat.pdf"
+                target="_blank"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
                 Download CV
@@ -57,8 +56,9 @@ export const AboutSection = () => {
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">Web Development</h4>
                   <p className="text-muted-foreground">
-                    Creating responsive and user-friendly websites and web applications 
-                    using modern frameworks and technologies to deliver seamless experiences across devices.
+                    Creating responsive and user-friendly websites and web
+                    applications using modern frameworks and technologies to
+                    deliver seamless experiences across devices.
                   </p>
                 </div>
               </div>
@@ -69,11 +69,10 @@ export const AboutSection = () => {
                   <User className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">
-                    UI/UX Design
-                  </h4>
+                  <h4 className="font-semibold text-lg">UI/UX Design</h4>
                   <p className="text-muted-foreground">
-                    Designing intuitive user interfaces and crafting seamless user experiences that enhance usability and engagement.
+                    Designing intuitive user interfaces and crafting seamless
+                    user experiences that enhance usability and engagement.
                   </p>
                 </div>
               </div>
