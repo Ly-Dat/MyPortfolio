@@ -18,7 +18,7 @@ const projects = [
       "A application for tracking personal expenses and managing budgets. It enables users to track, classify, and record their expenditure, giving them useful information.",
     image: "/projects/expensetracker.png",
     tags: ["React", "Node.js", "MongoDB"],
-    demoUrl: "https://expense-tracker-mdrb3x73p-datlys-projects.vercel.app/",
+    demoUrl: "https://expense-tracker-lemon-omega.vercel.app/",
     githubUrl: "https://github.com/LeTrietHuan-Student/Project-CSW-303.git",
   },
   {
