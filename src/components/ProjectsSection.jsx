@@ -31,6 +31,16 @@ const projects = [
     demoUrl: "https://tan-chi-tai-ceramics.vercel.app/",
     githubUrl: "https://github.com/Ly-Dat/TanChiTai_Ceramics",
   },
+   {
+    id: 4,
+    title: "Ceramic Ceramic Website",
+    description:
+       "An online destination for handcrafted ceramics, where customers can explore and shop stylish, budget-friendly pottery and home décor with ease.",
+    image: "/projects/TCTCeramic.png",
+    tags: ["React", "Node.js", "MongoDB"],
+    demoUrl: "https://web-ceramic-wunm.vercel.app/",
+    githubUrl: "https://github.com/Ly-Dat/web_ceramic",
+  },
 ];
 
 export const ProjectsSection = () => {
