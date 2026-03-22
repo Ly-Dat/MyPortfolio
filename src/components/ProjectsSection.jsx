@@ -1,4 +1,4 @@
-import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { ArrowRight, ExternalLink, Github, FileText} from "lucide-react";
 
 const projects = [
   {
@@ -7,9 +7,10 @@ const projects = [
     description:
       "An AI integrated website application used to monitor EIU student GPA, Visualize the curriculum to illustrate compulsory courses, prerequisites, and key subjects, along with course information and reviews,in accordance with the training program.",
     image: "/projects/smartadvisor.png",
-    tags: ["Express.js", "Node.js", "EJS ","Bootstrap"],
+    tags: ["Express.js", "Node.js", "EJS ", "Bootstrap"],
     demoUrl: "https://smartlearning.onrender.com/login",
     githubUrl: "https://github.com/Ly-Dat/SmartLearning",
+    detailUrl: "/projects/smart-learning-advisor",
   },
   {
     id: 2,
@@ -20,26 +21,40 @@ const projects = [
     tags: ["React", "Node.js", "MongoDB"],
     demoUrl: "https://expense-tracker-lemon-omega.vercel.app/",
     githubUrl: "https://github.com/LeTrietHuan-Student/Project-CSW-303.git",
+    detailUrl: "/projects/expense-tracker",
   },
   {
     id: 3,
-    title: "Ceramic House Website",
+    title: "Product Price Management Website",
     description:
-      "An application that streamlines ceramic product management, making it simple to explore and find beautiful, budget-friendly ceramics.",
+      "A React-based web application that allows users to view and manage product prices easily. The system fetches product data directly from an Excel file, automatically calculates the total amount, generates PDF invoices, and provides a bank transfer QR code for quick payment.",
     image: "/projects/ceramicHouse.png",
-    tags: ["React", "Node.js", "MongoDB"],
-    demoUrl: "https://tan-chi-tai-ceramics.vercel.app/",
+    tags: ["React", "Excel Data Fetching", "PDF Export", "QR Payment"],
+    demoUrl: "https://tan-chi-tai-ceramics.vercel.app/bill",
     githubUrl: "https://github.com/Ly-Dat/TanChiTai_Ceramics",
+    detailUrl: "/projects/price-management",
   },
-   {
+  {
     id: 4,
-    title: "Ceramic Ceramic Website",
+    title: "Quiz & Interview Practice Platform",
     description:
-       "An online destination for handcrafted ceramics, where customers can explore and shop stylish, budget-friendly pottery and home décor with ease.",
+      "A full-stack quiz platform using React and NestJS for interview practice and IT learning, featuring dynamic quiz creation, real-time scoring, and planned AI-powered question generation.",
+    image: "/projects/quizApp.png",
+    tags: ["React", "NestJS", "MongoDB", "REST API"],
+    demoUrl: "https://interview-quizz-software.vercel.app/",
+    githubUrl: "https://github.com/Hung1510/Capstone_Project_Quizz",
+    detailUrl: "/projects/quiz-platform",
+  },
+  {
+    id: 5,
+    title: "Ceramic Website",
+    description:
+      "An online destination for handcrafted ceramics, where customers can explore and shop stylish, budget-friendly pottery and home décor with ease.",
     image: "/projects/TCTCeramic.png",
     tags: ["React", "Node.js", "MongoDB"],
     demoUrl: "https://web-ceramic-wunm.vercel.app/",
-    githubUrl: "https://github.com/Ly-Dat/web_ceramic",
+    githubUrl: "https://github.com/Ly-Dat/ceramic-website",
+    detailUrl: "/projects/ceramic",
   },
 ];
 
@@ -53,10 +68,10 @@ export const ProjectsSection = () => {
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Here are some of my recent projects, where I both learn and code at the same time using the project learning method.
-          Each one was an opportunity to learn, experiment and a challenge for me to overcome.
+          Here are some of my recent projects, where I both learn and code at
+          the same time using the project learning method. Each one was an
+          opportunity to learn, experiment and a challenge for me to overcome.
         </p>
-
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, key) => (
@@ -103,6 +118,13 @@ export const ProjectsSection = () => {
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
                     >
                       <Github size={20} />
+                    </a>
+                    <a
+                      href={project.detailUrl}
+                      target="_blank"
+                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                    >
+                      <FileText size={20} />
                     </a>
                   </div>
                 </div>

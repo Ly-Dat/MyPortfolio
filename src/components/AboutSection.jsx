@@ -1,5 +1,6 @@
 // import { Briefcase, Code, User } from "lucide-react";
 import { Code, User } from "lucide-react";
+import { lang } from "../helper/lang";
 
 export const AboutSection = () => {
   return (
@@ -7,7 +8,7 @@ export const AboutSection = () => {
       {" "}
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          About <span className="text-primary"> Me</span>
+          {lang({ vi: "Thông tin về", en: "About" })} <span className="text-primary"> {lang({ vi: "tôi", en: "Me" })}</span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
