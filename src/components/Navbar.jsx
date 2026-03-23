@@ -35,7 +35,7 @@ export const Navbar = () => {
       <div className="container flex items-center justify-between">
         <a
           className="text-xl font-bold text-primary flex items-center"
-          href="#hero"
+          href={`/#hero`}
         >
           <span className="relative z-10">
             <span className="text-glow text-foreground"> Lý Đạt </span>{" "}
@@ -84,7 +84,7 @@ export const Navbar = () => {
             {navItems.map((item, key) => (
               <a
                 key={key}
-                href={item.href}
+                href={`/${item.href}`}
                 className="text-foreground/80 hover:text-primary transition-colors duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >

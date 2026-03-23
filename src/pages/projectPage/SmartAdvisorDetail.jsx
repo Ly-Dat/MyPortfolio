@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Navbar } from "../../components/Navbar";
 import { StarBackground } from "@/components/StarBackground";
 import { SkyBackground } from "@/components/SkyBackground";
+import * as Icons from "lucide-react";
 
 // ── Theme hook ────────────────────────────────────────────────────────────────
 function useTheme() {
@@ -26,7 +27,7 @@ function useTheme() {
 const PAGES = [
   {
     num: "01",
-    icon: "🔐",
+    icon: "LockOpen",
     iconBg: "bg-blue-900/40",
     title: "Login Page",
     subtitle: "Xác thực sinh viên qua hệ thống EIU",
@@ -40,11 +41,11 @@ const PAGES = [
     tags: ["Express Session", "Middleware", "Bootstrap"],
     tagDark: "bg-blue-900/50 text-blue-300 border border-blue-700/40",
     tagLight: "bg-blue-100 text-blue-700 border border-blue-200",
-    img: "/projects/login.png",
+    img: "/SmartAdvisor/login.png",
   },
   {
     num: "02",
-    icon: "📊",
+    icon: "AppWindow",
     iconBg: "bg-yellow-900/30",
     title: "Dashboard",
     subtitle: "Tổng quan GPA và thông tin sinh viên",
@@ -58,11 +59,11 @@ const PAGES = [
     tags: ["EJS Template", "MongoDB", "REST API"],
     tagDark: "bg-yellow-900/40 text-yellow-300 border border-yellow-700/40",
     tagLight: "bg-yellow-100 text-yellow-700 border border-yellow-200",
-    img: "/projects/dashboard.png",
+    img: "/SmartAdvisor/dashboard.png",
   },
   {
     num: "03",
-    icon: "📈",
+    icon: "ChartLine",
     iconBg: "bg-green-900/30",
     title: "Xem điểm",
     subtitle: "Bảng điểm chi tiết theo kỳ học",
@@ -76,11 +77,11 @@ const PAGES = [
     tags: ["EJS", "MongoDB Aggregate", "Bootstrap Table"],
     tagDark: "bg-green-900/40 text-green-300 border border-green-700/40",
     tagLight: "bg-green-100 text-green-700 border border-green-200",
-    img: "/projects/scores.png",
+    img: "/SmartAdvisor/scores.png",
   },
   {
     num: "04",
-    icon: "🗺️",
+    icon: "Map",
     iconBg: "bg-sky-900/30",
     title: "Lộ trình học",
     subtitle: "Flowchart · Đề xuất môn · Xuất PDF · Chat AI",
@@ -95,11 +96,11 @@ const PAGES = [
     tags: ["D3.js / SVG", "PDFKit", "Gemini API"],
     tagDark: "bg-sky-900/40 text-sky-300 border border-sky-700/40",
     tagLight: "bg-sky-100 text-sky-700 border border-sky-200",
-    img: "/projects/roadmap.png",
+    img: "/SmartAdvisor/roadmap.png",
   },
   {
     num: "05",
-    icon: "🤖",
+    icon: "Bot",
     iconBg: "bg-orange-900/30",
     title: "Tư vấn AI",
     subtitle: "Tư vấn học tập thông minh với Gemini",
@@ -114,11 +115,11 @@ const PAGES = [
     tags: ["Gemini API", "Node.js", "Streaming"],
     tagDark: "bg-orange-900/40 text-orange-300 border border-orange-700/40",
     tagLight: "bg-orange-100 text-orange-700 border border-orange-200",
-    img: "/projects/ai.png",
+    img: "/SmartAdvisor/ai.png",
   },
   {
     num: "06",
-    icon: "💬",
+    icon: "MessageSquare",
     iconBg: "bg-emerald-900/30",
     title: "Nhắn tin Advisor",
     subtitle: "Kênh trao đổi sinh viên — cố vấn học tập",
@@ -132,25 +133,25 @@ const PAGES = [
     tags: ["Socket.io", "MongoDB", "Real-time"],
     tagDark: "bg-emerald-900/40 text-emerald-300 border border-emerald-700/40",
     tagLight: "bg-emerald-100 text-emerald-700 border border-emerald-200",
-    img: "/projects/advisor.png",
+    img: "/SmartAdvisor/advisor.png",
   },
 ];
 
 const TECH = [
-  { icon: "⚡", name: "Node.js", role: "Runtime" },
-  { icon: "🚂", name: "Express.js", role: "Framework" },
-  { icon: "📄", name: "EJS", role: "Template Engine" },
-  { icon: "🍃", name: "MongoDB", role: "Database" },
-  { icon: "🤖", name: "Gemini API", role: "AI Integration" },
-  { icon: "🎨", name: "Bootstrap", role: "UI Framework" },
-  { icon: "📊", name: "D3.js", role: "Flowchart" },
-  { icon: "📡", name: "Socket.io", role: "Real-time" },
-  { icon: "📄", name: "PDFKit", role: "PDF Export" },
+  { icon: "Zap", name: "Node.js", role: "Runtime" },
+  { icon: "Server", name: "Express.js", role: "Framework" },
+  { icon: "FileText", name: "EJS", role: "Template Engine" },
+  { icon: "Database", name: "MongoDB", role: "Database" },
+  { icon: "Bot", name: "Gemini API", role: "AI Integration" },
+  { icon: "Palette", name: "Bootstrap", role: "UI Framework" },
+  { icon: "BarChart3", name: "D3.js", role: "Flowchart" },
+  { icon: "Radio", name: "Socket.io", role: "Real-time" },
+  { icon: "FileDown", name: "PDFKit", role: "PDF Export" },
 ];
 
 const ARCH = [
   {
-    icon: "🖥️",
+    icon: "Monitor",
     title: "Frontend",
     dark: "border-sky-500/30 bg-sky-900/10",
     light: "border-sky-200 bg-sky-50",
@@ -158,7 +159,7 @@ const ARCH = [
     desc: "EJS Templates · Bootstrap · D3.js · Socket.io Client · Responsive UI",
   },
   {
-    icon: "⚙️",
+    icon: "Settings",
     title: "Backend",
     dark: "border-orange-500/30 bg-orange-900/10",
     light: "border-orange-200 bg-orange-50",
@@ -166,7 +167,7 @@ const ARCH = [
     desc: "Express.js · Node.js · MVC Pattern · Gemini API · PDFKit · Socket.io Server",
   },
   {
-    icon: "🍃",
+    icon: "Database",
     title: "Database",
     dark: "border-emerald-500/30 bg-emerald-900/10",
     light: "border-emerald-200 bg-emerald-50",
@@ -211,6 +212,8 @@ function SectionTitle({ pre, accent, desc, isLight }) {
 
 // ── Page Card ─────────────────────────────────────────────────────────────────
 function PageCard({ page, isLight }) {
+  const IconComponent = Icons[page.icon];
+
   return (
     <div
       className={`rounded-2xl overflow-hidden border transition-all duration-300 mb-14 ${
@@ -230,7 +233,7 @@ function PageCard({ page, isLight }) {
         <div
           className={`w-11 h-11 rounded-xl flex items-center justify-center text-xl flex-shrink-0 ${page.iconBg}`}
         >
-          {page.icon}
+          {IconComponent && <IconComponent />}
         </div>
         <div>
           <h3
@@ -309,6 +312,8 @@ function PageCard({ page, isLight }) {
 // ── Main ──────────────────────────────────────────────────────────────────────
 function SmartAdvisorDetail() {
   const isLight = useTheme();
+  const Rocket = Icons["Rocket"];
+  const Zap = Icons["Zap"];
 
   return (
     <div
@@ -381,6 +386,29 @@ function SmartAdvisorDetail() {
                 </div>
               ))}
             </div>
+            {/* ── User pass ── */}
+            <div
+              className={`mt-6 mb-6 rounded-xl border px-5 py-4 text-s ${
+                isLight
+                  ? "bg-slate-50 border-slate-200 text-slate-700"
+                  : "bg-white/[0.03] border-white/10 text-slate-300"
+              }`}
+            >
+              <div className="font-semibold mb-2 text-sky-500">
+                Demo Account
+              </div>
+
+              <div className="flex flex-col gap-1">
+                <div>
+                  <span className="font-bold">ID:</span>{" "}
+                  <span className="font-mono">233188e4eda1</span>
+                </div>
+                <div>
+                  <span className="font-bold">Password:</span>{" "}
+                  <span className="font-mono">9006</span>
+                </div>
+              </div>
+            </div>
 
             <div className="flex gap-3 flex-wrap">
               <a
@@ -389,7 +417,7 @@ function SmartAdvisorDetail() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-medium transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(21,101,192,0.4)]"
               >
-                🚀 Live Demo
+                {Rocket && <Rocket />} Live Demo
               </a>
               <a
                 href="https://github.com/Ly-Dat/SmartLearning"
@@ -401,7 +429,7 @@ function SmartAdvisorDetail() {
                     : "border-white/20 text-white hover:border-sky-400 hover:text-sky-400"
                 }`}
               >
-                ⚡ GitHub
+                {Zap && <Zap />} GitHub
               </a>
             </div>
           </div>
@@ -429,28 +457,40 @@ function SmartAdvisorDetail() {
             isLight={isLight}
           />
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3">
-            {TECH.map((t) => (
-              <div
-                key={t.name}
-                className={`rounded-2xl p-4 flex flex-col items-center gap-2 text-center border transition-all duration-200 hover:-translate-y-1 ${
-                  isLight
-                    ? "bg-white border-slate-200 shadow-sm hover:border-blue-300 hover:shadow-md"
-                    : "bg-white/[0.03] border-white/10 hover:border-blue-400/40"
-                }`}
-              >
-                <span className="text-2xl">{t.icon}</span>
-                <span
-                  className={`text-xs font-semibold ${isLight ? "text-slate-700" : "text-white"}`}
+            {TECH.map((t) => {
+              const IconComponent = Icons[t.icon];
+
+              return (
+                <div
+                  key={t.name}
+                  className={`rounded-2xl p-4 flex flex-col items-center gap-2 text-center border transition-all duration-200 hover:-translate-y-1 ${
+                    isLight
+                      ? "bg-white border-slate-200 shadow-sm hover:border-blue-300 hover:shadow-md"
+                      : "bg-white/[0.03] border-white/10 hover:border-blue-400/40"
+                  }`}
                 >
-                  {t.name}
-                </span>
-                <span
-                  className={`text-[10px] ${isLight ? "text-slate-500" : "text-slate-500"}`}
-                >
-                  {t.role}
-                </span>
-              </div>
-            ))}
+                  <span className="text-2xl">
+                    {IconComponent && <IconComponent />}
+                  </span>
+
+                  <span
+                    className={`text-xs font-semibold ${
+                      isLight ? "text-slate-700" : "text-white"
+                    }`}
+                  >
+                    {t.name}
+                  </span>
+
+                  <span
+                    className={`text-[10px] ${
+                      isLight ? "text-slate-500" : "text-slate-500"
+                    }`}
+                  >
+                    {t.role}
+                  </span>
+                </div>
+              );
+            })}
           </div>
         </div>
 
@@ -464,24 +504,36 @@ function SmartAdvisorDetail() {
             isLight={isLight}
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {ARCH.map((layer) => (
-              <div
-                key={layer.title}
-                className={`border rounded-2xl p-6 text-center ${
-                  isLight ? layer.light : layer.dark
-                }`}
-              >
-                <div className="text-3xl mb-3">{layer.icon}</div>
-                <h4 className={`font-bold text-base mb-2 ${layer.titleColor}`}>
-                  {layer.title}
-                </h4>
-                <p
-                  className={`text-xs leading-relaxed ${isLight ? "text-slate-600" : "text-slate-400"}`}
+            {ARCH.map((layer) => {
+              const IconComponent = Icons[layer.icon];
+
+              return (
+                <div
+                  key={layer.title}
+                  className={`border rounded-2xl p-6 text-center ${
+                    isLight ? layer.light : layer.dark
+                  }`}
                 >
-                  {layer.desc}
-                </p>
-              </div>
-            ))}
+                  <div className="text-3xl mb-3 flex justify-center">
+                    {IconComponent && <IconComponent size={28} />}
+                  </div>
+
+                  <h4
+                    className={`font-bold text-base mb-2 ${layer.titleColor}`}
+                  >
+                    {layer.title}
+                  </h4>
+
+                  <p
+                    className={`text-xs leading-relaxed ${
+                      isLight ? "text-slate-600" : "text-slate-400"
+                    }`}
+                  >
+                    {layer.desc}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

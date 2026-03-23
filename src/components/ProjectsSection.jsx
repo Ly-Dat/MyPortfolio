@@ -121,7 +121,6 @@ export const ProjectsSection = () => {
                     </a>
                     <a
                       href={project.detailUrl}
-                      target="_blank"
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
                     >
                       <FileText size={20} />
