@@ -1,4 +1,4 @@
-import { ArrowRight, ExternalLink, Github, FileText} from "lucide-react";
+import { ArrowRight, ExternalLink, Github, FileText } from "lucide-react";
 
 const projects = [
   {
@@ -25,17 +25,6 @@ const projects = [
   },
   {
     id: 3,
-    title: "Product Price Management Website",
-    description:
-      "A React-based web application that allows users to view and manage product prices easily. The system fetches product data directly from an Excel file, automatically calculates the total amount, generates PDF invoices, and provides a bank transfer QR code for quick payment.",
-    image: "/projects/ceramicHouse.png",
-    tags: ["React", "Excel Data Fetching", "PDF Export", "QR Payment"],
-    demoUrl: "https://tan-chi-tai-ceramics.vercel.app/bill",
-    githubUrl: "https://github.com/Ly-Dat/TanChiTai_Ceramics",
-    detailUrl: "/projects/price-management",
-  },
-  {
-    id: 4,
     title: "Quiz & Interview Practice Platform",
     description:
       "A full-stack quiz platform using React and NestJS for interview practice and IT learning, featuring dynamic quiz creation, real-time scoring, and planned AI-powered question generation.",
@@ -46,14 +35,36 @@ const projects = [
     detailUrl: "/projects/quiz-platform",
   },
   {
+    id: 4,
+    title: "Product Price Management Website",
+    description:
+      "A React-based web application that allows users to view and manage product prices easily. The system fetches product data directly from an Excel file, automatically calculates the total amount, generates PDF invoices, and provides a bank transfer QR code for quick payment.",
+    image: "/projects/ceramicHouse.png",
+    tags: ["React", "Excel Data Fetching", "PDF Export", "QR Payment"],
+    demoUrl: "https://tan-chi-tai-ceramics.vercel.app/bill",
+    githubUrl: "https://github.com/Ly-Dat/TanChiTai_Ceramics",
+    detailUrl: "/projects/price-management",
+  },
+  {
     id: 5,
+    title: "Employee Shift Scheduling System",
+    description:
+      "A web-based shift scheduling system that allows employees to register and manage weekly work shifts. The application fetches and processes data directly from Excel files, providing real-time shift tracking, auto-selection, and PDF export for efficient workforce management.",
+    image: "/projects/shift-scheduler.png",
+    tags: ["React", "Excel Data Processing", "Scheduling System", "PDF Export"],
+    demoUrl: "https://warehouse-shift.vercel.app",
+    githubUrl: "https://github.com/Ly-Dat/WarehouseShift",
+    detailUrl: "/projects/shift-scheduler",
+  },
+  {
+    id: 6,
     title: "Ceramic Website",
     description:
       "An online destination for handcrafted ceramics, where customers can explore and shop stylish, budget-friendly pottery and home décor with ease.",
     image: "/projects/TCTCeramic.png",
     tags: ["React", "Node.js", "MongoDB"],
     demoUrl: "https://web-ceramic-wunm.vercel.app/",
-    githubUrl: "https://github.com/Ly-Dat/ceramic-website",
+    githubUrl: "https://github.com/Ly-Dat/web_ceramic",
     detailUrl: "/projects/ceramic",
   },
 ];
