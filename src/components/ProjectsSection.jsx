@@ -8,7 +8,7 @@ const projects = [
       "An AI integrated website application used to monitor EIU student GPA, Visualize the curriculum to illustrate compulsory courses, prerequisites, and key subjects, along with course information and reviews,in accordance with the training program.",
     image: "/projects/smartadvisor.png",
     tags: ["Express.js", "Node.js", "EJS ", "Bootstrap"],
-    demoUrl: "https://smartlearning.onrender.com/login",
+    demoUrl: "https://smart-learning-chi.vercel.app/login",
     githubUrl: "https://github.com/Ly-Dat/SmartLearning",
     detailUrl: "/projects/smart-learning-advisor",
   },
