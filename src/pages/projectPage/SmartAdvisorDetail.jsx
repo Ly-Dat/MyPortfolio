@@ -3,6 +3,7 @@ import { Navbar } from "../../components/Navbar";
 import { StarBackground } from "@/components/StarBackground";
 import { SkyBackground } from "@/components/SkyBackground";
 import * as Icons from "lucide-react";
+import { lang } from "@/helper/lang";
 
 // ── Theme hook ────────────────────────────────────────────────────────────────
 function useTheme() {
@@ -29,13 +30,28 @@ const PAGES = [
     num: "01",
     icon: "LockOpen",
     iconBg: "bg-blue-900/40",
-    title: "Login Page",
-    subtitle: "Xác thực sinh viên qua hệ thống EIU",
+    title: lang({ vi: "Trang đăng nhập", en: "Login Page" }),
+    subtitle: lang({
+      vi: "Xác thực sinh viên bằng mã số sinh viên",
+      en: "Student authentication using student ID",
+    }),
     features: [
-      "Xác thực email EIU (@eiu.edu.vn)",
-      "Session management với Express Session",
-      "Bảo vệ route với middleware xác thực",
-      "Giao diện Bootstrap responsive",
+      lang({
+        vi: "Xác thực id sinh viên EIU",
+        en: "EIU student ID authentication",
+      }),
+      lang({
+        vi: "Session management với Express Session",
+        en: "Session management using Express Session",
+      }),
+      lang({
+        vi: "Bảo vệ route với middleware xác thực",
+        en: "Route protection using authentication middleware",
+      }),
+      lang({
+        vi: "Giao diện Bootstrap responsive",
+        en: "Responsive UI with Bootstrap",
+      }),
     ],
     dotColor: "bg-blue-500",
     tags: ["Express Session", "Middleware", "Bootstrap"],
@@ -47,13 +63,28 @@ const PAGES = [
     num: "02",
     icon: "AppWindow",
     iconBg: "bg-yellow-900/30",
-    title: "Dashboard",
-    subtitle: "Tổng quan GPA và thông tin sinh viên",
+    title: lang({ vi: "Dashboard", en: "Dashboard" }),
+    subtitle: lang({
+      vi: "Tổng quan GPA và thông tin sinh viên",
+      en: "Overview of GPA and student information",
+    }),
     features: [
-      "Hiển thị GPA trung bình theo hệ 4.0",
-      "Thống kê tổng số môn & môn đã hoàn thành",
-      "Thông tin sinh viên: ID, email, chuyên ngành",
-      "Hành động nhanh: điểm, lộ trình, tư vấn",
+      lang({
+        vi: "Hiển thị GPA trung bình theo hệ 4.0",
+        en: "Display GPA on 4.0 scale",
+      }),
+      lang({
+        vi: "Thống kê tổng số môn & môn đã hoàn thành",
+        en: "Total courses & completed courses stats",
+      }),
+      lang({
+        vi: "Thông tin sinh viên: ID, email, chuyên ngành",
+        en: "Student info: ID, email, major",
+      }),
+      lang({
+        vi: "Hành động nhanh: điểm, lộ trình, tư vấn",
+        en: "Quick actions: scores, roadmap, advisor",
+      }),
     ],
     dotColor: "bg-yellow-500",
     tags: ["EJS Template", "MongoDB", "REST API"],
@@ -65,13 +96,22 @@ const PAGES = [
     num: "03",
     icon: "ChartLine",
     iconBg: "bg-green-900/30",
-    title: "Xem điểm",
-    subtitle: "Bảng điểm chi tiết theo kỳ học",
+    title: lang({ vi: "Xem điểm", en: "Scores" }),
+    subtitle: lang({
+      vi: "Bảng điểm chi tiết theo kỳ học",
+      en: "Detailed transcript by semester",
+    }),
     features: [
-      "Hiển thị điểm số theo thang 10 và hệ 4.0",
-      "Phân loại màu sắc: A / B / C / D / F trực quan",
-      "Lọc và tìm kiếm môn học theo kỳ",
-      "Tính GPA tổng hợp và theo từng học kỳ",
+      lang({
+        vi: "Hiển thị mã môn học và điểm số hệ 4.0",
+        en: "Display course codes and GPA scores",
+      }),
+      lang({
+        vi: "Phân loại màu sắc A / B / C / D / F",
+        en: "Color-coded grading system",
+      }),
+      lang({ vi: "Hiển thị môn học theo kỳ", en: "Courses by semester" }),
+      lang({ vi: "Xuất PDF bảng điểm", en: "Export transcript to PDF" }),
     ],
     dotColor: "bg-green-500",
     tags: ["EJS", "MongoDB Aggregate", "Bootstrap Table"],
@@ -83,17 +123,26 @@ const PAGES = [
     num: "04",
     icon: "Map",
     iconBg: "bg-sky-900/30",
-    title: "Lộ trình học",
-    subtitle: "Flowchart · Đề xuất môn · Xuất PDF · Chat AI",
+    title: lang({ vi: "Lộ trình học", en: "Learning Roadmap" }),
+    subtitle: lang({
+      vi: "Flowchart · Đề xuất môn · Xuất PDF · Chat AI",
+      en: "Flowchart · Course suggestion · PDF · AI Chat",
+    }),
     features: [
-      "Flowchart động với mũi tên tiên quyết",
-      "Màu sắc phân biệt: hoàn thành / đang học / chưa học",
-      "Đề xuất môn học phù hợp kỳ tiếp theo",
-      "Xuất lộ trình ra file PDF",
-      "Chat với AI ngay trong trang lộ trình",
+      lang({
+        vi: "Flowchart động với mũi tên tiên quyết",
+        en: "Dynamic prerequisite flowchart",
+      }),
+      lang({
+        vi: "Màu sắc phân biệt trạng thái môn học",
+        en: "Color-coded course status",
+      }),
+      lang({ vi: "Đề xuất môn học kỳ tiếp theo", en: "Course recommendation" }),
+      lang({ vi: "Xuất lộ trình ra PDF", en: "Export roadmap to PDF" }),
+      lang({ vi: "Chat AI ngay trong trang", en: "Integrated AI chat" }),
     ],
     dotColor: "bg-sky-500",
-    tags: ["D3.js / SVG", "PDFKit", "Gemini API"],
+    tags: ["D3.js / SVG", "Browser Print", "AI API"],
     tagDark: "bg-sky-900/40 text-sky-300 border border-sky-700/40",
     tagLight: "bg-sky-100 text-sky-700 border border-sky-200",
     img: "/SmartAdvisor/roadmap.png",
@@ -102,38 +151,31 @@ const PAGES = [
     num: "05",
     icon: "Bot",
     iconBg: "bg-orange-900/30",
-    title: "Tư vấn AI",
-    subtitle: "Tư vấn học tập thông minh với Gemini",
+    title: lang({ vi: "Tư vấn AI", en: "AI Advisor" }),
+    subtitle: lang({
+      vi: "Tư vấn học tập thông minh",
+      en: "Smart academic advising",
+    }),
     features: [
-      "Tích hợp Google Gemini API",
-      "Nhận diện ngữ cảnh GPA & lộ trình cá nhân",
-      "Trả lời bằng tiếng Việt và tiếng Anh",
-      "Streaming response thời gian thực",
-      "Lịch sử hội thoại trong phiên",
+      lang({ vi: "Tích hợp AI open source", en: "Integrate open-source AI" }),
+      lang({
+        vi: "Nhận diện GPA & lộ trình",
+        en: "Context-aware GPA & roadmap",
+      }),
+      lang({
+        vi: "Hỗ trợ tiếng Việt & Anh",
+        en: "Vietnamese & English support",
+      }),
+      lang({
+        vi: "Streaming response real-time",
+        en: "Real-time streaming response",
+      }),
     ],
     dotColor: "bg-orange-500",
-    tags: ["Gemini API", "Node.js", "Streaming"],
+    tags: ["AI API", "Node.js", "Streaming"],
     tagDark: "bg-orange-900/40 text-orange-300 border border-orange-700/40",
     tagLight: "bg-orange-100 text-orange-700 border border-orange-200",
     img: "/SmartAdvisor/ai.png",
-  },
-  {
-    num: "06",
-    icon: "MessageSquare",
-    iconBg: "bg-emerald-900/30",
-    title: "Nhắn tin Advisor",
-    subtitle: "Kênh trao đổi sinh viên — cố vấn học tập",
-    features: [
-      "Danh sách cố vấn theo ngành học",
-      "Trạng thái online / offline thời gian thực",
-      "Giao diện chat trực quan, thân thiện",
-      "Lưu lịch sử hội thoại vào database",
-    ],
-    dotColor: "bg-emerald-500",
-    tags: ["Socket.io", "MongoDB", "Real-time"],
-    tagDark: "bg-emerald-900/40 text-emerald-300 border border-emerald-700/40",
-    tagLight: "bg-emerald-100 text-emerald-700 border border-emerald-200",
-    img: "/SmartAdvisor/advisor.png",
   },
 ];
 
@@ -142,11 +184,11 @@ const TECH = [
   { icon: "Server", name: "Express.js", role: "Framework" },
   { icon: "FileText", name: "EJS", role: "Template Engine" },
   { icon: "Database", name: "MongoDB", role: "Database" },
-  { icon: "Bot", name: "Gemini API", role: "AI Integration" },
+  { icon: "Bot", name: "AI API", role: "AI Integration" },
   { icon: "Palette", name: "Bootstrap", role: "UI Framework" },
   { icon: "BarChart3", name: "D3.js", role: "Flowchart" },
-  { icon: "Radio", name: "Socket.io", role: "Real-time" },
-  { icon: "FileDown", name: "PDFKit", role: "PDF Export" },
+  { icon: "Radio", name: "Firebase", role: "Real-time" },
+  { icon: "Printer", name: "Browser Print", role: "Print / Export PDF" },
 ];
 
 const ARCH = [
@@ -156,7 +198,7 @@ const ARCH = [
     dark: "border-sky-500/30 bg-sky-900/10",
     light: "border-sky-200 bg-sky-50",
     titleColor: "text-sky-500",
-    desc: "EJS Templates · Bootstrap · D3.js · Socket.io Client · Responsive UI",
+    desc: "EJS Templates · Bootstrap · D3.js · Firebase · Responsive UI",
   },
   {
     icon: "Settings",
@@ -164,7 +206,7 @@ const ARCH = [
     dark: "border-orange-500/30 bg-orange-900/10",
     light: "border-orange-200 bg-orange-50",
     titleColor: "text-orange-500",
-    desc: "Express.js · Node.js · MVC Pattern · Gemini API · PDFKit · Socket.io Server",
+    desc: "Express.js · Node.js · MVC Pattern · AI API · Browser Print · Firebase",
   },
   {
     icon: "Database",
@@ -173,6 +215,103 @@ const ARCH = [
     light: "border-emerald-200 bg-emerald-50",
     titleColor: "text-emerald-600",
     desc: "MongoDB Atlas · Mongoose ODM · Users, Courses, Scores, Messages",
+  },
+];
+
+const MY_ROLE_STEPS = [
+  {
+    icon: "Palette",
+    color: "text-sky-500",
+    dot: "bg-sky-500",
+    ringDark: "ring-sky-500/20",
+    ringLight: "ring-sky-200",
+    title: lang({ vi: "Thiết kế UI/UX", en: "UI/UX Design" }),
+    items: [
+      lang({
+        vi: "Thiết kế giao diện responsive với Bootstrap",
+        en: "Designed responsive user interfaces using Bootstrap",
+      }),
+      lang({
+        vi: "Thiết kế flowchart động với D3.js / SVG cho trang lộ trình",
+        en: "Built dynamic flowcharts using D3.js / SVG for the roadmap page",
+      }),
+      lang({
+        vi: "Xây dựng layout EJS template cho trang lộ trình và chat advisor",
+        en: "Developed EJS templates for roadmap and advisor chat pages",
+      }),
+      lang({
+        vi: "Phát triển giao diện chat AI với streaming response theo real-time",
+        en: "Developed AI chat UI with real-time streaming responses",
+      }),
+    ],
+  },
+  {
+    icon: "Server",
+    color: "text-orange-500",
+    dot: "bg-orange-500",
+    ringDark: "ring-orange-500/20",
+    ringLight: "ring-orange-200",
+    title: lang({ vi: "Phát triển Backend", en: "Backend Development" }),
+    items: [
+      lang({
+        vi: "Xây dựng REST API với Express.js theo mô hình MVC",
+        en: "Built REST APIs with Express.js following MVC architecture",
+      }),
+      lang({
+        vi: "Thiết kế schema MongoDB cho hệ thống flowchart (nodes & paths)",
+        en: "Designed MongoDB schema for flowchart system (nodes & paths)",
+      }),
+      lang({
+        vi: "Tích hợp MongoDB Atlas + Mongoose để quản lý dữ liệu",
+        en: "Integrated MongoDB Atlas and Mongoose for data management",
+      }),
+    ],
+  },
+  {
+    icon: "Bot",
+    color: "text-purple-500",
+    dot: "bg-purple-500",
+    ringDark: "ring-purple-500/20",
+    ringLight: "ring-purple-200",
+    title: lang({
+      vi: "Tích hợp AI & Real-time",
+      en: "AI & Real-time Integration",
+    }),
+    items: [
+      lang({
+        vi: "Tìm model AI API (openai/gpt-oss-20b:free) với streaming response",
+        en: "Researched AI models (openai/gpt-oss-20b:free) with streaming response",
+      }),
+      lang({
+        vi: "Tham gia xây dựng câu prompt cho AI nhận diện GPA & lộ trình cá nhân",
+        en: "Contributed to prompt design for GPA and personalized roadmap understanding",
+      }),
+      lang({
+        vi: "Tích hợp Firebase cho chat real-time giữa sinh viên và cố vấn",
+        en: "Integrated Firebase for real-time chat between students and advisors",
+      }),
+    ],
+  },
+  {
+    icon: "FileOutput",
+    color: "text-emerald-500",
+    dot: "bg-emerald-500",
+    ringDark: "ring-emerald-500/20",
+    ringLight: "ring-emerald-200",
+    title: lang({
+      vi: "Xuất PDF & Triển khai",
+      en: "PDF Export & Deployment",
+    }),
+    items: [
+      lang({
+        vi: "Xuất lộ trình học ra file PDF với Browser Print",
+        en: "Exported learning roadmap to PDF using browser print",
+      }),
+      lang({
+        vi: "Deploy ứng dụng lên Vercel",
+        en: "Deployed the application on Vercel",
+      }),
+    ],
   },
 ];
 
@@ -333,11 +472,6 @@ function SmartAdvisorDetail() {
               : "border-white/10 bg-white/[0.03]"
           }`}
         >
-          {/* <img
-            src="/projects/smartadvisor.png"
-            alt="Smart Learning Advisor"
-            className="w-full h-72 object-cover"
-          /> */}
           <div className="p-8">
             <div
               className={`inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs mb-4 border font-semibold ${
@@ -362,17 +496,18 @@ function SmartAdvisorDetail() {
                 isLight ? "text-slate-600" : "text-slate-400"
               }`}
             >
-              Nền tảng tư vấn học tập thông minh tích hợp AI — giúp sinh viên
-              EIU theo dõi GPA, trực quan hóa lộ trình học và nhận tư vấn học
-              thuật cá nhân hóa theo thời gian thực.
+              {lang({
+                vi: "Nền tảng tư vấn học tập tích hợp AI giúp sinh viên theo dõi GPA, trực quan hóa lộ trình và nhận tư vấn cá nhân hóa.",
+                en: "An AI-powered platform that helps students track GPA, visualize learning paths, and receive personalized guidance.",
+              })}
             </p>
 
             <div className="flex gap-8 mb-8 flex-wrap justify-center">
               {[
-                { n: "6", l: "Trang chính" },
-                { n: "31", l: "Môn học" },
-                { n: "AI", l: "Tư vấn thông minh" },
-                { n: "PDF", l: "Xuất lộ trình" },
+                { n: "6", l: lang({ vi: "Trang", en: "Pages" }) },
+                { n: "31", l: lang({ vi: "Môn học", en: "Courses" }) },
+                { n: "AI", l: lang({ vi: "Tư vấn", en: "AI Advisor" }) },
+                { n: "PDF", l: lang({ vi: "Xuất file", en: "PDF Export" }) },
               ].map((s) => (
                 <div key={s.l} className="text-center">
                   <div className="text-2xl font-black text-sky-500">{s.n}</div>
@@ -386,6 +521,7 @@ function SmartAdvisorDetail() {
                 </div>
               ))}
             </div>
+
             {/* ── User pass ── */}
             <div
               className={`mt-6 mb-6 rounded-xl border px-5 py-4 text-s ${
@@ -397,7 +533,6 @@ function SmartAdvisorDetail() {
               <div className="font-semibold mb-2 text-sky-500">
                 Demo Account
               </div>
-
               <div className="flex flex-col gap-1">
                 <div>
                   <span className="font-bold">ID:</span>{" "}
@@ -412,12 +547,13 @@ function SmartAdvisorDetail() {
 
             <div className="flex gap-3 flex-wrap">
               <a
-                href="https://smartlearning.onrender.com/login"
+                href="https://smart-learning-chi.vercel.app/login"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-medium transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(21,101,192,0.4)]"
               >
-                {Rocket && <Rocket />} Live Demo
+                {Rocket && <Rocket />}{" "}
+                {lang({ vi: "Xem demo", en: "Live Demo" })}
               </a>
               <a
                 href="https://github.com/Ly-Dat/SmartLearning"
@@ -435,12 +571,110 @@ function SmartAdvisorDetail() {
           </div>
         </div>
 
+        {/* ── My Role ── */}
+        <div className="mb-12">
+          <Pill label={lang({ vi: "Vai trò", en: "Role" })} isLight={isLight} />
+
+          <SectionTitle
+            pre={lang({ vi: "Vai trò của", en: "My" })}
+            accent={lang({ vi: "bản thân", en: "Role" })}
+            desc={lang({
+              vi: "Đảm nhận toàn bộ vòng đời phát triển sản phẩm — từ thiết kế giao diện đến triển khai backend và tích hợp AI.",
+              en: "Responsible for the full product development lifecycle — from UI design to backend implementation and AI integration.",
+            })}
+            isLight={isLight}
+          />
+
+          {/* Role badge */}
+          <div className="flex justify-center mb-8">
+            <span
+              className={`inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-bold border ${
+                isLight
+                  ? "bg-blue-50 border-blue-200 text-blue-700"
+                  : "bg-blue-900/30 border-blue-400/30 text-blue-300"
+              }`}
+            >
+              <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
+              {lang({
+                vi: "Lập trình viên Fullstack",
+                en: "Fullstack Developer",
+              })}
+            </span>
+          </div>
+
+          {/* Timeline */}
+          <div className="relative">
+            {/* Vertical line */}
+            <div
+              className={`absolute left-5 top-2 bottom-2 w-px ${
+                isLight ? "bg-slate-200" : "bg-white/10"
+              }`}
+            />
+
+            {MY_ROLE_STEPS.map((step, i) => {
+              const IconComponent = Icons[step.icon];
+              return (
+                <div key={i} className="relative pl-14 mb-8 last:mb-0">
+                  {/* Dot */}
+                  <div
+                    className={`absolute left-0 w-10 h-10 rounded-full flex items-center justify-center ring-4 ${
+                      isLight ? step.ringLight : step.ringDark
+                    } ${
+                      isLight
+                        ? "bg-white border border-slate-200 shadow-sm"
+                        : "bg-[#0f172a] border border-white/10"
+                    }`}
+                  >
+                    <span className={`text-base ${step.color}`}>
+                      {IconComponent && <IconComponent size={18} />}
+                    </span>
+                  </div>
+
+                  {/* Card */}
+                  <div
+                    className={`rounded-xl border p-5 transition-all duration-200 ${
+                      isLight
+                        ? "bg-white border-slate-200 shadow-sm hover:shadow-md hover:border-blue-200"
+                        : "bg-white/[0.03] border-white/10 hover:border-blue-400/30"
+                    }`}
+                  >
+                    <h4 className={`font-bold text-sm mb-3 ${step.color}`}>
+                      {step.title}
+                    </h4>
+                    <ul className="flex flex-col gap-2">
+                      {step.items.map((item) => (
+                        <li
+                          key={item}
+                          className={`flex items-start gap-2 text-sm leading-relaxed ${
+                            isLight ? "text-slate-600" : "text-slate-400"
+                          }`}
+                        >
+                          <span
+                            className={`w-1.5 h-1.5 rounded-full flex-shrink-0 mt-2 ${step.dot}`}
+                          />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
         {/* ── Pages ── */}
-        <Pill label="Các trang" isLight={isLight} />
+        <Pill
+          label={lang({ vi: "Các trang", en: "Pages" })}
+          isLight={isLight}
+        />
         <SectionTitle
-          pre="Mô tả từng"
-          accent="trang"
-          desc="Hệ thống gồm 6 trang chính, mỗi trang giải quyết một nhu cầu cụ thể trong hành trình học tập của sinh viên."
+          pre={lang({ vi: "Mô tả từng", en: "Explore" })}
+          accent={lang({ vi: "trang", en: "page" })}
+          desc={lang({
+            vi: "Hệ thống gồm 6 trang chính, mỗi trang giải quyết một nhu cầu cụ thể trong hành trình học tập của sinh viên.",
+            en: "The system consists of 6 main pages, each addressing a specific need in the student learning journey.",
+          })}
           isLight={isLight}
         />
         {PAGES.map((page) => (
@@ -449,11 +683,18 @@ function SmartAdvisorDetail() {
 
         {/* ── Tech Stack ── */}
         <div className="mb-10">
-          <Pill label="Tech Stack" isLight={isLight} />
+          <Pill
+            label={lang({ vi: "Công nghệ", en: "Tech Stack" })}
+            isLight={isLight}
+          />
+
           <SectionTitle
-            pre="Công nghệ"
-            accent="sử dụng"
-            desc="Xây dựng trên nền tảng Node.js với kiến trúc MVC, tích hợp AI và database NoSQL để đảm bảo hiệu suất và khả năng mở rộng."
+            pre={lang({ vi: "Công nghệ", en: "Technologies" })}
+            accent={lang({ vi: "sử dụng", en: "Used" })}
+            desc={lang({
+              vi: "Xây dựng trên nền tảng Node.js với kiến trúc MVC, tích hợp AI và database NoSQL để đảm bảo hiệu suất và khả năng mở rộng.",
+              en: "Built on Node.js with an MVC architecture, integrating AI and NoSQL databases to ensure performance and scalability.",
+            })}
             isLight={isLight}
           />
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3">
@@ -496,11 +737,18 @@ function SmartAdvisorDetail() {
 
         {/* ── Architecture ── */}
         <div className="mb-4">
-          <Pill label="Kiến trúc" isLight={isLight} />
+          <Pill
+            label={lang({ vi: "Kiến trúc", en: "Architecture" })}
+            isLight={isLight}
+          />
+
           <SectionTitle
-            pre="Kiến trúc"
-            accent="hệ thống"
-            desc="Mô hình MVC 3 tầng rõ ràng: Client → Server → Database với AI layer tích hợp ở tầng dịch vụ."
+            pre={lang({ vi: "Kiến trúc", en: "System" })}
+            accent={lang({ vi: "hệ thống", en: "Architecture" })}
+            desc={lang({
+              vi: "Mô hình MVC 3 tầng rõ ràng: Client → Server → Database với AI layer tích hợp ở tầng dịch vụ.",
+              en: "A clear 3-tier MVC architecture: Client → Server → Database, with an AI layer integrated at the service level.",
+            })}
             isLight={isLight}
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
