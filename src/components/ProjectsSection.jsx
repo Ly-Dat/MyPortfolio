@@ -11,7 +11,7 @@ const projects = [
     }),
     image: "/projects/smartadvisor.png",
     tags: ["Express.js", "Node.js", "EJS", "Bootstrap"],
-    demoUrl: "https://smart-learning-chi.vercel.app/login",
+    demoUrl: "https://smart-learning-jvakdob3j-datlys-projects.vercel.app/login",
     githubUrl: "https://github.com/Ly-Dat/SmartLearning",
     detailUrl: "/projects/smart-learning-advisor",
   },
