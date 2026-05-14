@@ -546,8 +546,14 @@ function SmartAdvisorDetail() {
             </div>
 
             <div className="flex gap-3 flex-wrap">
-              <a
+              {/* <a
                 href="https://smart-learning-chi.vercel.app/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-medium transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(21,101,192,0.4)]"
+              > */}
+              <a
+                href="https://smart-learning-jvakdob3j-datlys-projects.vercel.app/login"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-medium transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(21,101,192,0.4)]"
