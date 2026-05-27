@@ -177,6 +177,39 @@ const PAGES = [
     tagLight: "bg-orange-100 text-orange-700 border border-orange-200",
     img: "/SmartAdvisor/ai.png",
   },
+  {
+    num: "06",
+    icon: "MessageCircle",
+    iconBg: "bg-cyan-900/30",
+    title: lang({ vi: "Chat với Advisor", en: "Advisor Chat" }),
+    subtitle: lang({
+      vi: "Trao đổi thời gian thực với cố vấn",
+      en: "Real-time communication with advisors",
+    }),
+    features: [
+      lang({
+        vi: "Chat realtime với Firebase",
+        en: "Real-time chat using Firebase",
+      }),
+      lang({
+        vi: "Đồng bộ tin nhắn tức thời",
+        en: "Instant message synchronization",
+      }),
+      lang({
+        vi: "Hỗ trợ nhiều phòng chat",
+        en: "Support multiple chat rooms",
+      }),
+      lang({
+        vi: "Giao diện responsive hiện đại",
+        en: "Modern responsive interface",
+      }),
+    ],
+    dotColor: "bg-cyan-500",
+    tags: ["Firebase", "Realtime Database", "Chat"],
+    tagDark: "bg-cyan-900/40 text-cyan-300 border border-cyan-700/40",
+    tagLight: "bg-cyan-100 text-cyan-700 border border-cyan-200",
+    img: "/SmartAdvisor/advisor.png",
+  },
 ];
 
 const TECH = [
@@ -358,8 +391,9 @@ function PageCard({ page, isLight }) {
       className={`rounded-2xl overflow-hidden border transition-all duration-300 mb-14 ${
         isLight
           ? "border-slate-200 bg-white shadow-md hover:shadow-xl hover:border-blue-300"
-          : "border-white/10 bg-white/[0.03] hover:border-blue-400/30 hover:shadow-[0_0_40px_rgba(21,101,192,0.12)]"
+          : "border-white/10 hover:border-blue-400/30 hover:shadow-[0_0_40px_rgba(21,101,192,0.12)]"
       }`}
+      style={!isLight ? { background: "hsl(var(--card))" } : undefined}
     >
       {/* Header */}
       <div
@@ -467,10 +501,9 @@ function SmartAdvisorDetail() {
         {/* ── Hero ── */}
         <div
           className={`rounded-2xl overflow-hidden border mb-16 ${
-            isLight
-              ? "border-slate-200 bg-white shadow-lg"
-              : "border-white/10 bg-white/[0.03]"
+            isLight ? "border-slate-200 bg-white shadow-lg" : "border-white/10"
           }`}
+          style={!isLight ? { background: "hsl(var(--card))" } : undefined}
         >
           <div className="p-8">
             <div
@@ -527,7 +560,7 @@ function SmartAdvisorDetail() {
               className={`mt-6 mb-6 rounded-xl border px-5 py-4 text-s ${
                 isLight
                   ? "bg-slate-50 border-slate-200 text-slate-700"
-                  : "bg-white/[0.03] border-white/10 text-slate-300"
+                  : "border-white/10 text-slate-300"
               }`}
             >
               <div className="font-semibold mb-2 text-sky-500">
@@ -553,7 +586,7 @@ function SmartAdvisorDetail() {
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-medium transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(21,101,192,0.4)]"
               > */}
               <a
-                href="https://smart-learning-jvakdob3j-datlys-projects.vercel.app/login"
+                href="https://smart-learning-chi.vercel.app/login"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-medium transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(21,101,192,0.4)]"
@@ -641,8 +674,11 @@ function SmartAdvisorDetail() {
                     className={`rounded-xl border p-5 transition-all duration-200 ${
                       isLight
                         ? "bg-white border-slate-200 shadow-sm hover:shadow-md hover:border-blue-200"
-                        : "bg-white/[0.03] border-white/10 hover:border-blue-400/30"
+                        : "border-white/10 hover:border-blue-400/30"
                     }`}
+                    style={
+                      !isLight ? { background: "hsl(var(--card))" } : undefined
+                    }
                   >
                     <h4 className={`font-bold text-sm mb-3 ${step.color}`}>
                       {step.title}
@@ -713,8 +749,11 @@ function SmartAdvisorDetail() {
                   className={`rounded-2xl p-4 flex flex-col items-center gap-2 text-center border transition-all duration-200 hover:-translate-y-1 ${
                     isLight
                       ? "bg-white border-slate-200 shadow-sm hover:border-blue-300 hover:shadow-md"
-                      : "bg-white/[0.03] border-white/10 hover:border-blue-400/40"
+                      : "border-white/10 hover:border-blue-400/40"
                   }`}
+                  style={
+                    !isLight ? { background: "hsl(var(--card))" } : undefined
+                  }
                 >
                   <span className="text-2xl">
                     {IconComponent && <IconComponent />}

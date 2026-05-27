@@ -45,18 +45,15 @@ export const ThemeToggle = () => {
       <button
         onClick={toggleLang}
         className={cn(
-          "p-2 text-lg font-semibold transition-colors",
-
-          // Light mode
-          isLightMode
-            ? "text-gray-800 hover:text-blue-600"
-            : "text-gray-300 hover:text-yellow-400",
-
-          // Highlight active language
-          langMode === "en" ? "opacity-80" : "opacity-80",
+          "p-1 rounded-full transition-all duration-300 hover:scale-105",
+          isLightMode ? "hover:bg-gray-100" : "hover:bg-white/10",
         )}
       >
-        {langMode === "en" ? "VI" : "EN"}
+        <img
+          src={langMode === "vi" ? "/icons/flag-vi.png" : "/icons/flag-en.png"}
+          alt="Language"
+          className="w-6 h-6 object-cover rounded-full"
+        />
       </button>
       <button
         onClick={toggleTheme}
