@@ -798,7 +798,7 @@ function ITQuizzDetail() {
               }`}
             >
               <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-              EIU · CIT · SWE 2023
+              {lang({ vi: "Dự án nhóm - EIU - CIT", en: "Group Project - EIU - CIT" })}
             </div>
 
             <h1
